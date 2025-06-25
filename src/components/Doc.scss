@@ -1,0 +1,192 @@
+@import './base.scss';
+
+.m2-doc {
+  max-width: calc(100vw - 3.4rem);
+  @include tablet {
+    max-width: calc(min(800px, 86vw));
+  }
+  margin-left: 1.7rem;
+  @include tablet {
+    margin: 0 auto;
+  }
+  padding: 0;
+  padding-bottom: 60vh;
+  padding-top: 2rem;
+  min-height: 100vh;
+  &:focus {
+    outline: none;
+  }
+
+  &.m2-serif {
+    font-family: "Roboto Slab", serif;
+  }
+
+  &>* {
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    @include tablet {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    margin: 0rem !important;
+    border-left: 3px solid transparent;
+  }
+
+  &>ul {
+    padding-left: 3rem;
+    &.m2-edit-mode {
+      padding-left: 2rem;
+    }
+  }
+
+  &>h2 {
+    color: lighten($black, 50%) !important;
+    font-size: 1.6rem;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    code {
+      border: none;
+    }
+  }
+
+  input[type=checkbox] {
+    cursor: pointer;
+  }
+
+  table.m2-edit-mode {
+    font-family: monospace;
+    font-size: 0.9rem;
+  }
+
+  img {
+    width: 100%;
+    @include tablet {
+      width: 60%;
+      margin-left: 20%;
+    }
+  }
+
+  .m2-reminder-text {
+    border-bottom: 2px dotted lightgreen;
+    padding-bottom: 0.2rem;
+  }
+
+  .m2-mention-hashtag {
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: $primary;
+    padding: 0px;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+
+  .m2-edit-mode {
+    white-space: pre-wrap;
+    padding-left: 0.5rem;
+    border-left: 3px solid rgba($primary, 0.4);
+    @include tablet {
+      padding-left: 1rem;
+    }
+  }
+
+  &.m2-syncing .m2-edit-mode {
+    border-left: 3px solid rgba($primary, 0.15);
+  }
+
+
+}
+
+.m2-offline {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: lightgrey;
+  font-size: 2rem;
+}
+
+.m2-is-signed-out,.m2-reminder {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: lighten($primary, 35%);
+
+  .m2-reminder-snippet {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .m2-close-reminder {
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+  }
+
+  em {
+    color: grey;
+  }
+}
+
+.m2-bookmark {
+  color: lighten(black, 50%);
+  font-size: 1.2rem;
+  &:not(.m2-edit-mode) {
+    text-transform: uppercase;
+  }
+  hr {
+    width: 6rem;
+    margin: 0.7rem 0;
+    border-bottom: 4px solid $primary;
+  }
+}
+
+.m2-todo-list {
+  list-style: none;
+
+  &.m2-todo-done {
+    text-decoration: line-through;
+  }
+}
+
+#m2-autocomplete {
+  position: fixed;
+  border: 1px solid lightgrey;
+  background-color: white;
+  div {
+    padding: 0.5rem;
+    cursor: pointer;
+    &:not(:last-child) {
+      border-bottom: 1px solid lightgrey;
+    }
+
+    &.m2-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+#m2-img-dialog,#m2-date-dialog {
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  input {
+    margin-bottom: 1.6rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type=date] {
+    font-size: 1.5rem;
+  }
+}

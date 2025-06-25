@@ -1,0 +1,15 @@
+$primary: #3137fd;
+$link: $primary;
+$fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$text: #474c6d;
+
+@import "../../node_modules/bulma/bulma.sass";
+
+a:hover {
+  color: darken($link, 20%);
+}
+
+.content pre {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "markdown-redesign-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/marked": "^5.0.2",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/shortid": "^0.0.32",
+    "@vitejs/plugin-react": "^4.2.1",
+    "bulma": "^0.9.4",
+    "marked": "^11.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.5",
+    "shortid": "^2.2.16",
+    "turndown": "^7.1.2",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  }
+}
