@@ -115,7 +115,7 @@ const Doc = (props: DocProps) => {
     }
 
     // Focus handler: set editing block and restore caret if needed
-    function handleFocusOrSelect(e: Event) {
+    function handleFocusOrSelect() {
       const sel = window.getSelection();
       if (!sel || !sel.anchorNode) return;
       const anchorNode = sel.anchorNode;
